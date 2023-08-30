@@ -7,12 +7,16 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import App from './App.tsx';
+import NotFound from './components/NotFound.tsx';
 import DevPage from './pages/DevPage.tsx';
+import HomePage from './pages/HomePage.tsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
+      <Route index element={<HomePage />}></Route>
       <Route path='developers' element={<DevPage />} />
+      <Route path='*' element={<NotFound />} />
     </Route>
   )
 );
