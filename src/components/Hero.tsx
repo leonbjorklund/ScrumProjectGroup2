@@ -1,14 +1,16 @@
 import { Box, Theme, Typography } from '@mui/material';
 import { CSSProperties } from 'react';
+import { images } from '../assets/images';
+import { Margin } from '@mui/icons-material';
 
 export default function Hero() {
   return (
-    <Box sx={{ position: 'relative' }}>
-      <img
+    <Box sx={heroContainerSX}>
+      {/* <img
         style={heroImgSX}
         src='https://github-production-user-asset-6210df.s3.amazonaws.com/45374596/264602286-1eed5533-3b5a-48d0-998f-372a34762772.png'
         alt='Example Image'
-      />
+      /> */}
       <Box sx={heroTextSX}>
         <Typography variant='h3' component='h1'>
           Welcome! We are Fifth Element <br></br>
@@ -16,7 +18,7 @@ export default function Hero() {
             web agency based in Gothenburg
           </Typography>
         </Typography>
-        <Typography style={scrollTextSX} variant='body1'>
+        <Typography sx={scrollTextSX} variant='h5'>
           Scroll down to meet us
         </Typography>
       </Box>
@@ -27,6 +29,23 @@ export default function Hero() {
 /* ----------------------
        CSS STYLING
 ---------------------- */
+
+const bgImg = images.hero;
+
+const heroContainerSX = (theme: Theme) => ({
+  background: `url(${bgImg})`,
+  position: 'relative',
+  // objectfit: 'cover',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  // display: 'flex',
+  // flexDirection: 'column',
+  // alignItems: 'center',
+  // justifyContent: 'center',
+  // position: 'relative',
+  width: 'auto',
+  height: '100vh',
+});
 
 const heroImgSX: CSSProperties = {
   width: '100%',
@@ -53,11 +72,7 @@ const heroTextSX = (theme: Theme) => ({
     fontSize: '2rem',
   },
 });
-const scrollTextSX: CSSProperties = {
-  // position: 'relative',
+const scrollTextSX = (theme: Theme) => ({
   display: 'flex',
-  justifyContent: 'flex-end',
-  // right: 0,
-  color: '#fff',
-  textShadow: '0px 0px 10px rgba(0, 0, 0, 0.25)',
-};
+  paddingTop: '200px',
+});
