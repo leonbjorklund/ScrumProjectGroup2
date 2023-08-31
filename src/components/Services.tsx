@@ -45,6 +45,7 @@ const ServicesImageStyleSX: SxProps<Theme> = theme => ({
   flex: 1,
   maxHeight: '100%',
   overflow: 'hidden',
+  display: 'flex',
   [theme.breakpoints.down('md')]: {},
   [theme.breakpoints.down('sm')]: {
     width: '100%',
