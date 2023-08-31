@@ -1,6 +1,6 @@
 export const images = {
   headerLogo:
-    'https://github-production-user-asset-6210df.s3.amazonaws.com/45374596/264602647-61a3e97d-d470-4d77-b60c-703e46d76d42.png',
+    'https://github-production-user-asset-6210df.s3.amazonaws.com/45374596/264663257-d2457ad0-343b-46c3-9672-123f566fe778.png',
   hero: 'https://github-production-user-asset-6210df.s3.amazonaws.com/45374596/264602286-1eed5533-3b5a-48d0-998f-372a34762772.png',
   whoWeAre:
     'https://github-production-user-asset-6210df.s3.amazonaws.com/45374596/264602797-07aeb851-4c9a-49d0-870d-030f3c1c08af.png',
