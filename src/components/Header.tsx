@@ -1,4 +1,5 @@
 import { AppBar, Box, Link, SxProps, Theme, Typography } from '@mui/material';
+import { images } from '../assets/images';
 
 export default function Header() {
   return (
@@ -7,6 +8,7 @@ export default function Header() {
         <Typography sx={textStyleSX} variant='h2'>
           Header
         </Typography>
+        <img src={images.headerLogo} alt='header' />
         <Link href='/Developers'>Devs</Link>
       </Box>
     </AppBar>
