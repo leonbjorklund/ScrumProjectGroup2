@@ -1,7 +1,10 @@
 import { AppBar, Box, Link, SxProps, Theme, Typography } from '@mui/material';
+import { useLocation } from 'react-router-dom';
 import { images } from '../assets/images';
 
 export default function Header() {
+  const location = useLocation();
+
   return (
     <AppBar sx={headerStyleSX}>
       <Box>
@@ -9,7 +12,8 @@ export default function Header() {
           Header
         </Typography>
         <img src={images.headerLogo} alt='header' />
-        <Link href='/Developers'>Devs</Link>
+        {location.pathname === '/' && <Link href='/developers'>Devs</Link>}
+        {location.pathname === '/developers' && <Link href='/'>Home</Link>}
       </Box>
     </AppBar>
   );
