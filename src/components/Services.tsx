@@ -8,17 +8,17 @@ export default function Services() {
   return (
     <Box sx={CompanyServicesStyleSX}>
       <Box sx={ServicesImageStyleSX}>
-        <img src={images.companyServices} alt='WhoWeAre' style={{maxWidth: '100%', maxHeight: "100%"}} />
+        <img src={images.companyServices} alt='Company services' style={{ width: '100%', height: "100%", objectFit: "cover" }} />
       </Box>
       <Box sx={TextBoxStyleSX}>
         <Typography sx={TitleStyleSX} variant='h3' color={'secondary'}>
           Company services
         </Typography>
-        <List sx={{...TextStyleSX, display: "flex", flexDirection: "column"}}>
+        <List sx={{ ...TextStyleSX, display: 'flex', flexDirection: 'column' }}>
           {listItems.map(item => (
             <ListItem key={item}>
-              <CircleIcon sx={{ fontSize: 'small', marginRight: "1rem" }} />
-              <Typography variant='h3'>{item}</Typography>
+              <CircleIcon sx={{ fontSize: 'small', marginRight: '1rem' }} />
+              <Typography sx={TextStyleSX} variant='h3'>{item}</Typography>
             </ListItem>
           ))}
         </List>
@@ -28,55 +28,64 @@ export default function Services() {
 }
 
 /* ----------------------
-       CSS STYLING
+CSS STYLING
 ---------------------- */
 
 const CompanyServicesStyleSX: SxProps<Theme> = theme => ({
-  display: 'flex',
-  padding: '2rem 0',
-  marginTop: '2rem',
-  height: '465px',
   width: '100%',
+  display: 'flex',
+  flexDirection: 'row',
+  margin: '2rem 0',
   [theme.breakpoints.down('sm')]: {
     flexDirection: 'column',
   },
 });
 
+const ServicesImageStyleSX: SxProps<Theme> = theme => ({
+  flex: 1,
+  maxHeight: '100%',
+  overflow: 'hidden',
+  [theme.breakpoints.down('md')]: {},
+  [theme.breakpoints.down('sm')]: {
+    width: '100%',
+  },
+});
+
 const TextBoxStyleSX: SxProps<Theme> = theme => ({
+  flex: 1,
   display: 'flex',
   flexDirection: 'column',
-  paddingRight: '1rem',
-  width: '100%',
-  height: '465px',
-  justifyContent: 'center',
   alignItems: 'center',
+  justifyContent: 'center',
+  textAlign: 'center',
   backgroundColor: 'primary.main',
   color: 'white',
-  [theme.breakpoints.down('md')]: {},
+  [theme.breakpoints.down('md')]: {
+
+  },
+  [theme.breakpoints.down('sm')]: {
+    width: '100%',
+  },
 });
 
 const TitleStyleSX: SxProps<Theme> = theme => ({
   fontWeight: 'bold',
-  marginBottom: '1.5rem',
   color: 'white',
-  [theme.breakpoints.down('md')]: {},
-});
-
-const TextStyleSX: SxProps<Theme> = theme => ({
-  fontSize: '26px',
-  paddingRight: '1rem',
-  width: '100%',
-  fontFamily: 'Poppins, sans-serif',
+  padding: "1rem 0",
   [theme.breakpoints.down('md')]: {
-    fontSize: '24px',
+    fontSize: '20px',
+  },
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '30px'
   },
 });
 
-const ServicesImageStyleSX: SxProps<Theme> = theme => ({
-  height: '100%',
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
+const TextStyleSX: SxProps<Theme> = theme => ({
+  fontFamily: 'Poppins, sans-serif',
   [theme.breakpoints.down('md')]: {
+    fontSize: '20px',
+  },
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '30px'
   },
 });
