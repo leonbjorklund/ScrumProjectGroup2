@@ -1,7 +1,46 @@
+import { Box, SxProps, Theme, Typography } from '@mui/material';
+
 export default function Developers() {
   return (
-    <div>
-      <h1>Developers</h1>
-    </div>
+    <Box sx={DevBoxStyleSX}>
+      <Typography sx={TitleStyleSX} variant='h3' color={'secondary'}>
+        Our team of developers
+      </Typography>
+
+      <Box sx={DevsStyleSX}>
+        
+      </Box>
+    </Box>
   );
 }
+
+const DevBoxStyleSX: SxProps<Theme> = theme => ({
+  width: '100%',
+  display: 'flex',
+  alignItems: 'center',
+  flexDirection: 'column',
+  [theme.breakpoints.down('sm')]: {
+
+  },
+});
+
+const TitleStyleSX: SxProps<Theme> = theme => ({
+  fontWeight: 'bold',
+  paddingBottom: '1rem',
+  [theme.breakpoints.down('md')]: {
+    fontSize: '20px',
+  },
+  [theme.breakpoints.down('sm')]: {
+    padding: '1rem 0',
+    fontSize: '30px',
+  },
+});
+
+const DevsStyleSX: SxProps<Theme> = theme => ({
+  display: 'flex',
+  justifyContent: 'space-evenly',
+  alignItems: 'center',
+  width: '100%',
+  [theme.breakpoints.down('md')]: {},
+  [theme.breakpoints.down('sm')]: {},
+});
