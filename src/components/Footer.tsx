@@ -11,7 +11,7 @@ export default function Footer() {
       <Box sx={contentStyleSX}>
         <Box sx={mapStyleSX}>
           <iframe
-            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2131.9744158048757!2d11.966787113131323!3d57.69990447375766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff36e37243e65%3A0x407a7ae10b08b087!2sVasaplatsen%2C%20G%C3%B6teborg!5e0!3m2!1sen!2sse!4v1693555079138!5m2!1sen!2sse'
+            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2131.3951240577126!2d11.991950277553512!3d57.70974577387091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff30de9cbee3d%3A0xbb3f902b63916df6!2sMedieinstitutet!5e0!3m2!1ssv!2sse!4v1693570155950!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade'
             style={{ border: '0' }}
             loading='lazy'
             referrerPolicy='no-referrer-when-downgrade'
@@ -19,7 +19,7 @@ export default function Footer() {
         </Box>
         <Box sx={contactStyleSX}>
           <Box sx={contactTextStyleSX}>
-            <HomeIcon fontSize='small' /> Vasagatan 18B
+            <HomeIcon fontSize='small' /> Anders Personsgatan 18 <br></br> Göteborg
           </Box>
           <Box sx={contactTextStyleSX}>
             <EmailIcon fontSize='small' /> FifthElement@FifthElement.com
@@ -39,7 +39,6 @@ export default function Footer() {
     </Box>
   );
 }
-
 const footerStyleSX: SxProps<Theme> = theme => ({
   backgroundColor: 'primary.main',
   display: 'flex',
