@@ -1,4 +1,6 @@
 import { Box, SxProps, Theme, Typography } from '@mui/material';
+import { devs } from '../assets/devs';
+import DevCard from './DevCard';
 
 export default function Developers() {
   return (
@@ -8,7 +10,9 @@ export default function Developers() {
       </Typography>
 
       <Box sx={DevsStyleSX}>
-        
+        {devs.map(dev => (
+          <DevCard key={dev.firstname} dev={dev} />
+        ))}
       </Box>
     </Box>
   );
@@ -19,9 +23,7 @@ const DevBoxStyleSX: SxProps<Theme> = theme => ({
   display: 'flex',
   alignItems: 'center',
   flexDirection: 'column',
-  [theme.breakpoints.down('sm')]: {
-
-  },
+  [theme.breakpoints.down('sm')]: {},
 });
 
 const TitleStyleSX: SxProps<Theme> = theme => ({
@@ -39,8 +41,16 @@ const TitleStyleSX: SxProps<Theme> = theme => ({
 const DevsStyleSX: SxProps<Theme> = theme => ({
   display: 'flex',
   justifyContent: 'space-evenly',
-  alignItems: 'center',
+  alignItems: 'start',
+  paddingTop: '3rem',
   width: '100%',
-  [theme.breakpoints.down('md')]: {},
-  [theme.breakpoints.down('sm')]: {},
+  [theme.breakpoints.down('md')]: {
+    flexWrap: 'wrap',
+    paddingTop: '1rem',
+  },
+  [theme.breakpoints.down('sm')]: {
+    paddingTop: '1rem',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
 });
