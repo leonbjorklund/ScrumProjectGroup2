@@ -31,16 +31,15 @@ const heroContainerSX: SxProps<Theme> = theme => ({
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   width: '100%',
-  minHeight: '500px',
-  // padding: '15rem 0',
+  minHeight: '600px',
   [theme.breakpoints.down('md')]: {
-    // padding: '8rem 0',
     fontsize: '1rem',
     color: 'red',
   },
 });
 
 const heroTextSX: SxProps<Theme> = {
+  position: 'absolute',
   width: '100%',
   height: '100%',
   color: '#ffffff',
@@ -78,7 +77,7 @@ const scrollTextSX: SxProps<Theme> = theme => ( {
   bottom: '0',
   left: '50%',
   transform: 'translateX(-50%)',
-  marginBottom: '2rem',
+  marginBottom: '1rem',
   [theme.breakpoints.down('md')]: {
     fontSize: '1.3rem',
   },
