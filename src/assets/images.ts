@@ -5,7 +5,7 @@ export const images = {
   whoWeAre:
     'https://github-production-user-asset-6210df.s3.amazonaws.com/45374596/264602797-07aeb851-4c9a-49d0-870d-030f3c1c08af.png',
   companyServices:
-    'https://github-production-user-asset-6210df.s3.amazonaws.com/45374596/264352924-8c798236-c721-4edb-b8e3-2c57b2f427fd.png',
+    'https://github-production-user-asset-6210df.s3.amazonaws.com/117123951/264786015-86aa1894-40c3-48ad-b61e-695bfb981105.jpg',
   leon: 'https://github-production-user-asset-6210df.s3.amazonaws.com/45374596/264603124-02b6e38a-96c8-4c3d-a838-ce011da1fb7a.png',
   thomas:
     'https://github-production-user-asset-6210df.s3.amazonaws.com/45374596/264603409-bb69e7d3-916e-4e40-96fd-4c4cb84a4aef.png',
