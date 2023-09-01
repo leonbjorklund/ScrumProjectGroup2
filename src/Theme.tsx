@@ -33,6 +33,10 @@ export const theme = createTheme({
       fontFamily: "'Frank Ruhl Libre', serif",
       color: '#065E6F',
     },
+    h3: {
+      fontFamily: 'Poppins, sans-serif',
+      fontSize: '30px',
+    },
     body1: {
       fontFamily: "'Frank Ruhl Libre', serif",
     },
