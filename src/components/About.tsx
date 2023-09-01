@@ -32,6 +32,7 @@ const WhoWeAreBoxStyleSX: SxProps<Theme> = theme => ({
   margin: '2rem 0',
   gap: '1.5rem',
   [theme.breakpoints.down('sm')]: {
+    margin: '0',
     gap: '0',
     flexDirection: 'column-reverse',
   },
@@ -45,7 +46,6 @@ const TextBoxStyleSX: SxProps<Theme> = theme => ({
   justifyContent: 'center',
   textAlign: 'end',
   paddingLeft: '1rem',
-  [theme.breakpoints.down('md')]: {},
   [theme.breakpoints.down('sm')]: {
     padding: '0 1rem',
     alignItems: 'center',
@@ -56,11 +56,12 @@ const TextBoxStyleSX: SxProps<Theme> = theme => ({
 
 const TitleStyleSX: SxProps<Theme> = theme => ({
   fontWeight: 'bold',
-  padding: '1rem 0',
+  paddingBottom: '1rem',
   [theme.breakpoints.down('md')]: {
     fontSize: '20px',
   },
   [theme.breakpoints.down('sm')]: {
+    padding: '1rem 0',
     fontSize: '30px',
   },
 });
@@ -71,7 +72,7 @@ const TextStyleSX: SxProps<Theme> = theme => ({
     fontSize: '20px',
   },
   [theme.breakpoints.down('sm')]: {
-    fontSize: '30px',
+    fontSize: '26px',
   },
 });
 
@@ -80,7 +81,6 @@ const TeamImageStyleSX: SxProps<Theme> = theme => ({
   maxHeight: '100%',
   overflow: 'hidden',
   display: 'flex',
-  [theme.breakpoints.down('md')]: {},
   [theme.breakpoints.down('sm')]: {
     width: '100%',
   },

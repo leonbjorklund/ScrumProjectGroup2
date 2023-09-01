@@ -31,8 +31,10 @@ const heroContainerSX: SxProps<Theme> = theme => ({
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   width: '100%',
-  height: '92%',
+  minHeight: '500px',
+  // padding: '15rem 0',
   [theme.breakpoints.down('md')]: {
+    // padding: '8rem 0',
     fontsize: '1rem',
     color: 'red',
   },
