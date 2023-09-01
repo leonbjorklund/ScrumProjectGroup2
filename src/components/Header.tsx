@@ -109,6 +109,7 @@ export default function DrawerAppBar() {
 }
 
 const headerStyleSX: SxProps = {
+  position: 'relative',
   display: 'flex',
   justifyContent: 'center',
   backgroundColor: 'white',
