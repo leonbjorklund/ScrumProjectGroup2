@@ -34,11 +34,18 @@ const DevCardStyleSX: SxProps<Theme> = theme => ({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
-  height: '420px',
+  height: '500px',
   alignItems: 'center',
   textAlign: 'center',
-  maxWidth: '230px',
+  width: '245px',
   margin: '1rem 0',
+  padding: '1rem',
+  borderRadius: '10px',
+  transition: 'all .1s ease-in-out',
+  '&:hover': {
+    boxShadow: '1px 1px 15px #065E6F',
+    transform: 'scale(1.03)',
+  },
   [theme.breakpoints.down('md')]: {},
   [theme.breakpoints.down('sm')]: {
     height: '100%',
@@ -68,7 +75,6 @@ const DevAboutStyleSX: SxProps<Theme> = theme => ({
 });
 const ButtonStyleSX: SxProps<Theme> = theme => ({
   fontSize: '14px',
-  marginTop: '1.5rem',
   padding: '.5rem 1rem',
   borderRadius: '55px',
   backgroundColor: '#065E6F',
