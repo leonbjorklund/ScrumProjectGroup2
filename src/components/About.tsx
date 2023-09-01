@@ -15,7 +15,7 @@ export default function About() {
       </Box>
 
       <Box sx={TeamImageStyleSX}>
-        <img src={images.whoWeAre} alt='WhoWeAre' />
+        <img src={images.whoWeAre} alt='WhoWeAre' style={{ width: '100%', height: "100%", objectFit: "cover" }}/>
       </Box>
     </Box>
   );
@@ -26,43 +26,62 @@ export default function About() {
 ---------------------- */
 
 const WhoWeAreBoxStyleSX: SxProps<Theme> = theme => ({
-  display: 'flex',
-  padding: '2rem 0',
-  gap: '1rem',
-  height: '465px',
   width: '100%',
-  [theme.breakpoints.down('md')]: {},
+  display: 'flex',
+  flexDirection: 'row',
+  margin: '2rem 0',
+  gap: '1.5rem',
+  [theme.breakpoints.down('sm')]: {
+    margin: '0',
+    gap: '0',
+    flexDirection: 'column-reverse',
+  },
 });
 
 const TextBoxStyleSX: SxProps<Theme> = theme => ({
+  flex: 1,
   display: 'flex',
   flexDirection: 'column',
+  alignItems: 'end',
+  justifyContent: 'center',
   textAlign: 'end',
   paddingLeft: '1rem',
-  width: '100%',
-  justifyContent: 'center',
-  [theme.breakpoints.down('md')]: {},
+  [theme.breakpoints.down('sm')]: {
+    padding: '0 1rem',
+    alignItems: 'center',
+    textAlign: 'center',
+    width: '100%',
+  },
 });
 
 const TitleStyleSX: SxProps<Theme> = theme => ({
   fontWeight: 'bold',
-  marginBottom: '1.5rem',
-  [theme.breakpoints.down('md')]: {},
+  paddingBottom: '1rem',
+  [theme.breakpoints.down('md')]: {
+    fontSize: '20px',
+  },
+  [theme.breakpoints.down('sm')]: {
+    padding: '1rem 0',
+    fontSize: '30px',
+  },
 });
 
 const TextStyleSX: SxProps<Theme> = theme => ({
-  paddingLeft: '1rem',
-  width: '100%',
+  fontFamily: 'Poppins, sans-serif',
   [theme.breakpoints.down('md')]: {
-    fontSize: '24px',
+    fontSize: '20px',
+  },
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '26px',
   },
 });
 
 const TeamImageStyleSX: SxProps<Theme> = theme => ({
-  // backgroundImage:
-  //   'url(https://github-production-user-asset-6210df.s3.amazonaws.com/45374596/264602797-07aeb851-4c9a-49d0-870d-030f3c1c08af.png)',
-  // backgroundSize: 'cover',
-  height: '100%',
-  [theme.breakpoints.down('md')]: {
+  flex: 1,
+  maxHeight: '100%',
+  overflow: 'hidden',
+  display: 'flex',
+  [theme.breakpoints.down('sm')]: {
+    width: '100%',
   },
 });

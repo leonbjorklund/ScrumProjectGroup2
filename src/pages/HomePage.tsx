@@ -8,11 +8,7 @@ import Services from '../components/Services';
 
 export default function HomePage() {
   return (
-    <Box
-      sx={{
-        height: '100vh',
-      }}
-    >
+    <Box>
       <Hero />
       <About />
       <Services />
