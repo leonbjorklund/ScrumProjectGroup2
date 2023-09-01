@@ -46,7 +46,6 @@ const ServicesImageStyleSX: SxProps<Theme> = theme => ({
   maxHeight: '100%',
   overflow: 'hidden',
   display: 'flex',
-  [theme.breakpoints.down('md')]: {},
   [theme.breakpoints.down('sm')]: {
     width: '100%',
   },
@@ -61,9 +60,6 @@ const TextBoxStyleSX: SxProps<Theme> = theme => ({
   textAlign: 'center',
   backgroundColor: 'primary.main',
   color: 'white',
-  [theme.breakpoints.down('md')]: {
-
-  },
   [theme.breakpoints.down('sm')]: {
     width: '100%',
   },
@@ -87,6 +83,6 @@ const TextStyleSX: SxProps<Theme> = theme => ({
     fontSize: '20px',
   },
   [theme.breakpoints.down('sm')]: {
-    fontSize: '30px'
+    fontSize: '26px'
   },
 });
