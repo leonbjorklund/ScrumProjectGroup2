@@ -1,4 +1,5 @@
 import { Box, Button, SxProps, Theme, Typography } from '@mui/material';
+import { NavLink } from 'react-router-dom';
 import { Dev } from '../assets/devs';
 
 interface DevCardProps {
@@ -22,7 +23,9 @@ export default function DevCard({ dev }: DevCardProps) {
           {dev.about}
         </Typography>
       </Box>
-      <Button sx={ButtonStyleSX}>Read more</Button>
+      <NavLink to={`/developers/DEV${dev.firstname}`}>
+        <Button sx={ButtonStyleSX}>Read more</Button>
+      </NavLink>
     </Box>
   );
 }
@@ -38,7 +41,7 @@ const DevCardStyleSX: SxProps<Theme> = theme => ({
   margin: '1rem 0',
   [theme.breakpoints.down('md')]: {},
   [theme.breakpoints.down('sm')]: {
-      height: '100%',
+    height: '100%',
     margin: '3rem 0',
   },
 });
