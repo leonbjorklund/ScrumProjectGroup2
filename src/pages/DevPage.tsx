@@ -1,7 +1,16 @@
+import { Box } from '@mui/system';
+import ContactForm from '../components/ContactForm';
+import Developers from '../components/Developers';
+import Portfolio from '../components/Portfolio';
+import ProfileCard from '../components/ProfileCard';
+
 export default function DevPage() {
   return (
-    <div>
-      <div id='developers' />
-    </div>
+    <Box>
+      <ProfileCard />
+      <Portfolio />
+      <ContactForm />
+      <Developers />
+    </Box>
   );
 }

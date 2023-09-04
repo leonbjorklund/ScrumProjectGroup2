@@ -5,14 +5,12 @@ import DevCard from './DevCard';
 export default function Developers() {
   return (
     <Box sx={DevBoxStyleSX}>
-      <div id='developers' />
-      <Typography sx={TitleStyleSX} variant='h2' color={'secondary'}>
+      <Typography sx={TitleStyleSX} variant='h2' color={'secondary'} id="developers">
         Our team of developers
       </Typography>
-
       <Box sx={DevsStyleSX}>
         {devs.map(dev => (
-          <DevCard key={dev.firstname} dev={dev} />
+          <DevCard key={dev.id} dev={dev} />
         ))}
       </Box>
     </Box>

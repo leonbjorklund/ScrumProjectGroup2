@@ -1,5 +1,6 @@
 import { Box, Button, SxProps, Theme, Typography } from '@mui/material';
 import { NavLink } from 'react-router-dom';
+import { scroller } from 'react-scroll';
 import { Dev } from '../assets/devs';
 
 interface DevCardProps {
@@ -7,6 +8,15 @@ interface DevCardProps {
 }
 
 export default function DevCard({ dev }: DevCardProps) {
+  const scrollDown = (section: string) => {
+    scroller.scrollTo(section, {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+      offset: -150,
+    });
+  };
+
   return (
     <Box sx={DevCardStyleSX}>
       <Box>
@@ -23,8 +33,11 @@ export default function DevCard({ dev }: DevCardProps) {
           {dev.about}
         </Typography>
       </Box>
-      <NavLink to={`/developers/DEV${dev.firstname}`}>
-        <Button sx={ButtonStyleSX}>Read more</Button>
+
+      <NavLink to={`/developers/${dev.firstname}`}>
+        <Button onClick={() => scrollDown('profileCard')} sx={ButtonStyleSX}>
+          Developers
+        </Button>
       </NavLink>
     </Box>
   );
