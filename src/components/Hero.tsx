@@ -1,20 +1,22 @@
-import { Box, SxProps, Theme, Typography } from '@mui/material';
+import { Box, Fade, SxProps, Theme, Typography } from '@mui/material';
 import { images } from '../assets/images';
 
 export default function Hero() {
   return (
     <Box sx={heroContainerSX}>
-      <Box sx={heroTextSX}>
-        <Typography sx={header1SX} variant='h3'>
-          Welcome! We are Fifth Element <br></br>
+      <Fade in={true} timeout={2000}>
+        <Box sx={heroTextSX}>
+          <Typography sx={header1SX} variant='h3'>
+            Welcome! We are Fifth Element
+          </Typography>
           <Typography sx={header2SX} variant='h4' component='h2'>
             web agency based in Gothenburg
           </Typography>
           <Typography sx={scrollTextSX} variant='h5'>
             Scroll down to meet our team
           </Typography>
-        </Typography>
-      </Box>
+        </Box>
+      </Fade>
     </Box>
   );
 }
@@ -72,7 +74,7 @@ const header2SX: SxProps<Theme> = theme => ({
   },
 });
 
-const scrollTextSX: SxProps<Theme> = theme => ( {
+const scrollTextSX: SxProps<Theme> = theme => ({
   position: 'absolute',
   bottom: '0',
   left: '50%',
@@ -85,5 +87,4 @@ const scrollTextSX: SxProps<Theme> = theme => ( {
     fontSize: '1rem',
     width: '100%',
   },
- 
 });
