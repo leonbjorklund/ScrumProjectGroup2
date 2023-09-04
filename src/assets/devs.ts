@@ -37,7 +37,7 @@ export const devs: Dev[] = [
     lastname: 'Berenjian',
     role: 'Back end developer',
     about: '“I enjoy nature walks and spending time with my family & firends.”',
-    profileDesc: 'asdasd',
+    profileDesc: 'With a combination of passion and education, my expertice in Back end development has a sturdy foundation and solid structure. I love learning new ways to improve both myself and my code.',
     email: '123123',
   },
   {

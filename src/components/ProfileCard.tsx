@@ -1,14 +1,21 @@
-import { Box, Button, SxProps, Theme, Typography } from '@mui/material';
-import { NavLink } from 'react-router-dom';
-import { Dev } from '../assets/devs';
+import { Box, SxProps, Theme, Typography } from '@mui/material';
+import { useParams } from 'react-router-dom';
+import { devs } from '../assets/devs';
+import NotFound from '../components/NotFound.tsx';
 
-interface DevCardProps {
-  dev: Dev;
-}
 
-export default function DevCard({ dev }: DevCardProps) {
+
+export default function ProfileCard( ) {
+  const params = useParams();
+
+  const dev = devs.find(dev => dev.firstname === params.firstname);
+
+  if (!dev) {
+    return <NotFound />;
+  }
+  
   return (
-    <Box sx={DevCardStyleSX}>
+      <Box sx={DevCardStyleSX}>
       <Box>
         <Box sx={DevImgStyleSX}>
           <img src={dev.img} alt='profilepic' style={{ height: '170px' }} />
@@ -20,12 +27,9 @@ export default function DevCard({ dev }: DevCardProps) {
           {dev.role}
         </Typography>
         <Typography sx={DevAboutStyleSX} variant='body1'>
-          {dev.about}
+          {dev.profileDesc}
         </Typography>
       </Box>
-      <NavLink to={`/developers/${dev.firstname}`}>
-        <Button sx={ButtonStyleSX}>Read more</Button>
-      </NavLink>
     </Box>
   );
 }
