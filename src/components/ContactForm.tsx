@@ -52,7 +52,7 @@ export default function ContactForm() {
           variant='filled'
           label='Message'
           multiline
-          rows={4}
+          rows={5}
           name='message'
           value={formik.values.message}
           onChange={formik.handleChange}
@@ -69,6 +69,7 @@ export default function ContactForm() {
 
 const ContactFormStyleSX: SxProps<Theme> = theme => ({
   width: '100%',
+  height: "600px",
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -100,10 +101,26 @@ const BackgroundImageStyleSX: SxProps<Theme> = theme => ({
 const TextFieldStyleSX: SxProps<Theme> = theme => ({
   width: '400px',
   backgroundColor: 'white',
+  '& .MuiFormHelperText-root': {
+    color: 'black', 
+    fontFamily: 'Poppins, sans-serif',
+  },
+  '& .MuiInputBase-root::before, & .MuiInputBase-root::after': {
+    borderBottomColor: 'black !important', 
+  },
+  '& .MuiInput-underline::before': {
+    borderBottom: 'none', 
+  },
+  '& .MuiInput-underline::after': {
+    borderBottom: 'none !important', 
+  },
   [theme.breakpoints.down('sm')]: {
     width: '250px',
   },
 });
+
+
+
 
 const TitleStyleSX: SxProps<Theme> = theme => ({
   fontWeight: 'bold',
@@ -121,6 +138,10 @@ const TitleStyleSX: SxProps<Theme> = theme => ({
 });
 
 const ButtonStyleSX: SxProps<Theme> = theme => ({
-  backgroundColor: 'primary',
+  backgroundColor: 'white',
+  width: '150px',
+  '&:hover': {
+    color: 'white',
+  },
   [theme.breakpoints.down('sm')]: {},
 });
