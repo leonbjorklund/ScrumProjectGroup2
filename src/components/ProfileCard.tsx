@@ -49,7 +49,7 @@ export default function ProfileCard() {
 
 const DevCardStyleSX: SxProps<Theme> = theme => ({
   display: 'flex',
-  height: '500px',
+  height: '400px',
   padding: '4rem 3rem',
   gap: '3rem',
   [theme.breakpoints.down('md')]: {
