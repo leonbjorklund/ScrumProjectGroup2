@@ -21,6 +21,8 @@ export default function ProfileCard() {
 
   return (
     <Box sx={DevCardStyleSX}>
+            <div id="profileCard" />
+
       <Box sx={DevImgStyleSX}>
         <img src={dev.img} alt='profilepic' />
       </Box>
@@ -91,6 +93,7 @@ const DevNameStyleSX: SxProps<Theme> = theme => ({
 const DevRoleStyleSX: SxProps<Theme> = theme => ({
   fontSize: '40px',
   fontWeight: 'bold',
+  color: '#065E6F',
   [theme.breakpoints.down('md')]: {
     fontSize: '24px',
   },
