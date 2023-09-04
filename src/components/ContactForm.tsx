@@ -126,8 +126,10 @@ const TitleStyleSX: SxProps<Theme> = theme => ({
   padding: '1rem 0',
   position: 'relative',
   zIndex: 1,
+  fontSize: '30px',
   [theme.breakpoints.down('md')]: {
-    fontSize: '20px',
+    paddingTop: '0rem',
+    fontSize: '30px',
   },
   [theme.breakpoints.down('sm')]: {
     fontSize: '30px',

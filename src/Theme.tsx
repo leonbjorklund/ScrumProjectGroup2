@@ -30,12 +30,13 @@ export const theme = createTheme({
       fontFamily: "'Poppins', serif",
     },
     h2: {
-      fontFamily: "'Frank Ruhl Libre', serif",
+      fontFamily: "'Poppins', serif",
       color: '#065E6F',
+      fontSize: '30px',
     },
     h3: {
       fontFamily: 'Poppins, sans-serif',
-      fontSize: '30px',
+      fontSize: '24px',
     },
     body1: {
       fontFamily: "'Frank Ruhl Libre', serif",

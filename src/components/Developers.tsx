@@ -5,7 +5,7 @@ import DevCard from './DevCard';
 export default function Developers() {
   return (
     <Box sx={DevBoxStyleSX}>
-      <Typography sx={TitleStyleSX} variant='h3' color={'secondary'} id="developers">
+      <Typography sx={TitleStyleSX} variant='h2' color={'secondary'} id="developers">
         Our team of developers
       </Typography>
       <Box sx={DevsStyleSX}>
@@ -26,14 +26,15 @@ const DevBoxStyleSX: SxProps<Theme> = theme => ({
 });
 
 const TitleStyleSX: SxProps<Theme> = theme => ({
+  padding: '1rem 0',
   fontWeight: 'bold',
   paddingBottom: '1rem',
+  fontSize: '34px',
   [theme.breakpoints.down('md')]: {
-    fontSize: '20px',
+    fontSize: '30px',
   },
   [theme.breakpoints.down('sm')]: {
-    padding: '1rem 0',
-    fontSize: '30px',
+    fontSize: '26px',
   },
 });
 
@@ -41,7 +42,7 @@ const DevsStyleSX: SxProps<Theme> = theme => ({
   display: 'flex',
   justifyContent: 'space-evenly',
   alignItems: 'start',
-  paddingTop: '3rem',
+  padding: '1rem 10px',
   width: '100%',
   [theme.breakpoints.down('md')]: {
     flexWrap: 'wrap',

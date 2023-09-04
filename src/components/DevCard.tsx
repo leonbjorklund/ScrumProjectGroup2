@@ -47,12 +47,12 @@ const DevCardStyleSX: SxProps<Theme> = theme => ({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
-  height: '500px',
+  height: '455px',
   alignItems: 'center',
   textAlign: 'center',
-  width: '245px',
+  width: '300px',
   margin: '1rem 0',
-  padding: '1rem',
+  padding: '1rem 0',
   borderRadius: '10px',
   transition: 'all .1s ease-in-out',
   '&:hover': {
@@ -62,7 +62,7 @@ const DevCardStyleSX: SxProps<Theme> = theme => ({
   [theme.breakpoints.down('md')]: {},
   [theme.breakpoints.down('sm')]: {
     height: '100%',
-    margin: '3rem 0',
+    margin: '1rem 0',
   },
 });
 const DevImgStyleSX: SxProps<Theme> = theme => ({
@@ -82,9 +82,13 @@ const DevRoleStyleSX: SxProps<Theme> = theme => ({
 });
 const DevAboutStyleSX: SxProps<Theme> = theme => ({
   fontSize: '14px',
-  paddingTop: '2rem',
+  paddingTop: '1.5rem',
+  margin: '0 .5rem',
+  height: '100px',
   [theme.breakpoints.down('md')]: {},
-  [theme.breakpoints.down('sm')]: {},
+  [theme.breakpoints.down('sm')]: {
+    paddingTop: '1rem',
+  },
 });
 const ButtonStyleSX: SxProps<Theme> = theme => ({
   fontSize: '14px',

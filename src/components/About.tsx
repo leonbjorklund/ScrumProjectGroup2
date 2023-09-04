@@ -5,10 +5,10 @@ export default function About() {
   return (
     <Box sx={WhoWeAreBoxStyleSX}>
       <Box sx={TextBoxStyleSX}>
-        <Typography sx={TitleStyleSX} variant='h3' color={'secondary'}>
+        <Typography sx={TitleStyleSX} variant='h2' color={'secondary'}>
           Who we are
         </Typography>
-        <Typography sx={TextStyleSX} variant='h3'>
+        <Typography sx={TextStyleSX} variant='body1'>
           A dedicated web-development team, crafting high-quality web apps tailored to our clients'
           needs. Excellence in every pixel, every line of code.
         </Typography>
@@ -62,21 +62,21 @@ const TitleStyleSX: SxProps<Theme> = theme => ({
   fontWeight: 'bold',
   paddingBottom: '1rem',
   [theme.breakpoints.down('md')]: {
-    fontSize: '20px',
+    fontSize: '26px',
   },
   [theme.breakpoints.down('sm')]: {
     padding: '1rem 0',
-    fontSize: '30px',
   },
 });
 
 const TextStyleSX: SxProps<Theme> = theme => ({
   fontFamily: 'Poppins, sans-serif',
+  fontSize: '26px',
   [theme.breakpoints.down('md')]: {
-    fontSize: '20px',
+    fontSize: '22px',
   },
   [theme.breakpoints.down('sm')]: {
-    fontSize: '26px',
+    fontSize: '22px',
   },
 });
 
