@@ -5,7 +5,7 @@ import DevCard from './DevCard';
 export default function Developers() {
   return (
     <Box sx={DevBoxStyleSX}>
-      <Typography sx={TitleStyleSX} variant='h2' color={'secondary'} id="developers">
+      <Typography sx={TitleStyleSX} variant='h2' color={'secondary'} id='developers'>
         Our team of developers
       </Typography>
       <Box sx={DevsStyleSX}>

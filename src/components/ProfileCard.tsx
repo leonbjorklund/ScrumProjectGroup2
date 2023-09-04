@@ -21,8 +21,7 @@ export default function ProfileCard() {
 
   return (
     <Box sx={DevCardStyleSX}>
-            <div id="profileCard" />
-
+      <div id='profileCard' />
       <Box sx={DevImgStyleSX}>
         <img src={dev.img} alt='profilepic' />
       </Box>
