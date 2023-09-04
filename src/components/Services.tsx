@@ -15,14 +15,14 @@ export default function Services() {
         />
       </Box>
       <Box sx={TextBoxStyleSX}>
-        <Typography sx={TitleStyleSX} variant='h3' color={'secondary'}>
+        <Typography sx={TitleStyleSX} variant='h2' color={'secondary'}>
           Company services
         </Typography>
         <List sx={{ ...TextStyleSX, display: 'flex', flexDirection: 'column' }}>
           {listItems.map(item => (
-            <ListItem key={item}>
+            <ListItem key={item} sx={ListItemStyleSX}>
               <CircleIcon sx={{ fontSize: 'small', marginRight: '1rem' }} />
-              <Typography sx={TextStyleSX} variant='h3'>
+              <Typography sx={TextStyleSX} variant='body1'>
                 {item}
               </Typography>
             </ListItem>
@@ -61,34 +61,46 @@ const TextBoxStyleSX: SxProps<Theme> = theme => ({
   flex: 1,
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'center',
+  alignItems: 'start',
   justifyContent: 'center',
   textAlign: 'center',
   backgroundColor: 'primary.main',
   color: 'white',
   [theme.breakpoints.down('sm')]: {
     width: '100%',
+    alignItems: 'center',
   },
 });
 
 const TitleStyleSX: SxProps<Theme> = theme => ({
   fontWeight: 'bold',
   color: 'white',
-  padding: '1rem 0',
+  padding: '1rem 0 1rem 4rem',
   [theme.breakpoints.down('md')]: {
-    fontSize: '20px',
+    fontSize: '24px',
+    padding: '1rem 0 1rem 2rem',
   },
   [theme.breakpoints.down('sm')]: {
-    fontSize: '30px',
+    fontSize: '24px',
+  },
+});
+
+const ListItemStyleSX: SxProps<Theme> = theme => ({
+  paddingTop: '0',
+  paddingLeft: '6rem',
+  [theme.breakpoints.down('md')]: {
+    paddingLeft: '2rem',
   },
 });
 
 const TextStyleSX: SxProps<Theme> = theme => ({
   fontFamily: 'Poppins, sans-serif',
+  fontSize: '26px',
   [theme.breakpoints.down('md')]: {
-    fontSize: '20px',
+    fontSize: '22px',
+    paddingRight: '1rem',
   },
   [theme.breakpoints.down('sm')]: {
-    fontSize: '26px',
+    fontSize: '22px',
   },
 });

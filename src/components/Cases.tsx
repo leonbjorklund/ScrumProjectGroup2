@@ -3,7 +3,7 @@ import { images } from '../assets/images';
 
 export default function Cases() {
   return (
-    <Box style={{ marginTop: '5rem' }}>
+    <Box style={{ marginTop: '2.5rem' }}>
       <Typography sx={textSX} variant='h3'>
         Cases
       </Typography>
@@ -29,6 +29,7 @@ const logoContainerSX: SxProps<Theme> = theme => ({
   justifyContent: 'center',
   alignItems: 'center',
   padding: '2rem',
+  paddingBottom: '2.5rem',
   gap: '2rem',
   '& img': {
     height: '59px',
@@ -41,5 +42,6 @@ const logoContainerSX: SxProps<Theme> = theme => ({
 
 const textSX: SxProps<Theme> = {
   display: 'flex',
+  fontSize: '26px',
   justifyContent: 'center',
 };
