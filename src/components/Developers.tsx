@@ -12,7 +12,7 @@ export default function Developers() {
 
       <Box sx={DevsStyleSX}>
         {devs.map(dev => (
-          <DevCard key={dev.firstname} dev={dev} />
+          <DevCard key={dev.id} dev={dev} />
         ))}
       </Box>
     </Box>
