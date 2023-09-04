@@ -3,9 +3,7 @@ import { useParams } from 'react-router-dom';
 import { devs } from '../assets/devs';
 import NotFound from '../components/NotFound.tsx';
 
-
-
-export default function ProfileCard( ) {
+export default function ProfileCard() {
   const params = useParams();
 
   const dev = devs.find(dev => dev.firstname === params.firstname);
@@ -13,22 +11,31 @@ export default function ProfileCard( ) {
   if (!dev) {
     return <NotFound />;
   }
-  
+
   return (
-      <Box sx={DevCardStyleSX}>
-      <Box>
-        <Box sx={DevImgStyleSX}>
-          <img src={dev.img} alt='profilepic' style={{ height: '170px' }} />
-        </Box>
+    <Box sx={DevCardStyleSX}>
+      <Box sx={DevImgStyleSX}>
+        <img src={dev.img} alt='profilepic' />
+      </Box>
+      <Box sx={DevPresentationStyleSX}>
         <Typography sx={DevNameStyleSX} variant='h1'>
           {dev.firstname + ' ' + dev.lastname}
         </Typography>
         <Typography sx={DevRoleStyleSX} variant='h1'>
           {dev.role}
         </Typography>
-        <Typography sx={DevAboutStyleSX} variant='body1'>
+        <Box sx={DevCompBoxStyleSX}>
+        {dev.comp.map(comp => (
+          <Typography sx={DevCompStyleSX} variant='h1'>
+            {comp}
+          </Typography>
+        ))}
+        </Box>
+        <Box sx={DevDescStyleSX}>
+        <Typography variant='body1'>
           {dev.profileDesc}
         </Typography>
+        </Box>
       </Box>
     </Box>
   );
@@ -36,59 +43,79 @@ export default function ProfileCard( ) {
 
 const DevCardStyleSX: SxProps<Theme> = theme => ({
   display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'space-between',
   height: '500px',
-  alignItems: 'center',
-  textAlign: 'center',
-  width: '245px',
-  margin: '1rem 0',
-  padding: '1rem',
-  borderRadius: '10px',
-  transition: 'all .1s ease-in-out',
-  '&:hover': {
-    boxShadow: '1px 1px 15px #065E6F',
-    transform: 'scale(1.03)',
+  padding: '4rem 3rem',
+  gap: '3rem',
+  [theme.breakpoints.down('md')]: {
+    gap: '1rem',
+    justifyContent: 'center',
   },
-  [theme.breakpoints.down('md')]: {},
   [theme.breakpoints.down('sm')]: {
-    height: '100%',
-    margin: '3rem 0',
+    flexDirection: 'column',
+    alignItems: 'center',
+    textAlign: 'center',
+    justifyContent: 'center',
   },
 });
 const DevImgStyleSX: SxProps<Theme> = theme => ({
-  [theme.breakpoints.down('md')]: {},
+  '& img': {
+      height: '170px',
+    },
+  [theme.breakpoints.down('md')]: {
+    '& img': {
+        height: '120px',
+      },
+  },
   [theme.breakpoints.down('sm')]: {},
 });
-const DevNameStyleSX: SxProps<Theme> = theme => ({
-  fontSize: '21px',
+const DevPresentationStyleSX: SxProps<Theme> = theme => ({
+
   [theme.breakpoints.down('md')]: {},
+  [theme.breakpoints.down('sm')]: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+});
+const DevNameStyleSX: SxProps<Theme> = theme => ({
+  fontSize: '58px',
+  [theme.breakpoints.down('md')]: {
+    fontSize: '34px',
+  },
   [theme.breakpoints.down('sm')]: {},
 });
 const DevRoleStyleSX: SxProps<Theme> = theme => ({
+  fontSize: '40px',
+  fontWeight: 'bold',
+  [theme.breakpoints.down('md')]: {
+    fontSize: '24px',
+  },
+  [theme.breakpoints.down('sm')]: {},
+});
+const DevCompBoxStyleSX: SxProps<Theme> = theme => ({
+  display: 'flex',
+  flexWrap: 'wrap',
+  [theme.breakpoints.down('md')]: {},
+  [theme.breakpoints.down('sm')]: {
+    marginTop: '.5rem',
+    justifyContent: 'center',
+  },
+});
+const DevCompStyleSX: SxProps<Theme> = theme => ({
   fontSize: '18px',
   paddingTop: '.5rem',
-  [theme.breakpoints.down('md')]: {},
-  [theme.breakpoints.down('sm')]: {},
-});
-const DevAboutStyleSX: SxProps<Theme> = theme => ({
-  fontSize: '14px',
-  paddingTop: '2rem',
-  [theme.breakpoints.down('md')]: {},
-  [theme.breakpoints.down('sm')]: {},
-});
-const ButtonStyleSX: SxProps<Theme> = theme => ({
-  fontSize: '14px',
-  padding: '.5rem 1rem',
-  borderRadius: '55px',
-  backgroundColor: '#065E6F',
-  color: '#FFF',
-  '&:hover': {
-    color: '#065E6F',
-    backgroundColor: '#FFF',
-    border: '1px solid #3F6768',
-    transform: 'scale(1.1)',
+  margin: '.2rem .5rem',
+  [theme.breakpoints.down('md')]: { 
+    fontSize: '12px',
   },
-  [theme.breakpoints.down('md')]: {},
+  [theme.breakpoints.down('sm')]: {},
+});
+const DevDescStyleSX: SxProps<Theme> = theme => ({
+  fontSize: '16px',
+    width: '70%',
+  paddingTop: '2rem',
+  [theme.breakpoints.down('md')]: {
+    width: '90%',
+  },
   [theme.breakpoints.down('sm')]: {},
 });
