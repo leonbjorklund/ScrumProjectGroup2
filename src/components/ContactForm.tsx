@@ -17,6 +17,7 @@ export default function ContactForm() {
   });
   return (
     <Box sx={ContactFormStyleSX}>
+      <div id='contact' />
       <Box sx={BackgroundImageStyleSX} />
       <Box component='form' noValidate onSubmit={formik.handleSubmit} sx={ContactFormStyleSX}>
         <Typography sx={TitleStyleSX} variant='h3'>
@@ -69,7 +70,7 @@ export default function ContactForm() {
 
 const ContactFormStyleSX: SxProps<Theme> = theme => ({
   width: '100%',
-  height: "600px",
+  height: '600px',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -102,25 +103,22 @@ const TextFieldStyleSX: SxProps<Theme> = theme => ({
   width: '400px',
   backgroundColor: 'white',
   '& .MuiFormHelperText-root': {
-    color: 'black', 
+    color: 'black',
     fontFamily: 'Poppins, sans-serif',
   },
   '& .MuiInputBase-root::before, & .MuiInputBase-root::after': {
-    borderBottomColor: 'black !important', 
+    borderBottomColor: 'black !important',
   },
   '& .MuiInput-underline::before': {
-    borderBottom: 'none', 
+    borderBottom: 'none',
   },
   '& .MuiInput-underline::after': {
-    borderBottom: 'none !important', 
+    borderBottom: 'none !important',
   },
   [theme.breakpoints.down('sm')]: {
     width: '250px',
   },
 });
-
-
-
 
 const TitleStyleSX: SxProps<Theme> = theme => ({
   fontWeight: 'bold',
