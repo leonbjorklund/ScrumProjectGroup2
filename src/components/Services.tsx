@@ -8,7 +8,11 @@ export default function Services() {
   return (
     <Box sx={CompanyServicesStyleSX}>
       <Box sx={ServicesImageStyleSX}>
-        <img src={images.companyServices} alt='Company services' style={{ width: '100%', height: "100%", objectFit: "cover" }} />
+        <img
+          src={images.companyServices}
+          alt='Company services'
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        />
       </Box>
       <Box sx={TextBoxStyleSX}>
         <Typography sx={TitleStyleSX} variant='h3' color={'secondary'}>
@@ -18,7 +22,9 @@ export default function Services() {
           {listItems.map(item => (
             <ListItem key={item}>
               <CircleIcon sx={{ fontSize: 'small', marginRight: '1rem' }} />
-              <Typography sx={TextStyleSX} variant='h3'>{item}</Typography>
+              <Typography sx={TextStyleSX} variant='h3'>
+                {item}
+              </Typography>
             </ListItem>
           ))}
         </List>
@@ -68,12 +74,12 @@ const TextBoxStyleSX: SxProps<Theme> = theme => ({
 const TitleStyleSX: SxProps<Theme> = theme => ({
   fontWeight: 'bold',
   color: 'white',
-  padding: "1rem 0",
+  padding: '1rem 0',
   [theme.breakpoints.down('md')]: {
     fontSize: '20px',
   },
   [theme.breakpoints.down('sm')]: {
-    fontSize: '30px'
+    fontSize: '30px',
   },
 });
 
@@ -83,6 +89,6 @@ const TextStyleSX: SxProps<Theme> = theme => ({
     fontSize: '20px',
   },
   [theme.breakpoints.down('sm')]: {
-    fontSize: '26px'
+    fontSize: '26px',
   },
 });
