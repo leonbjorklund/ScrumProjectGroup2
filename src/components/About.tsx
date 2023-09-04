@@ -15,7 +15,11 @@ export default function About() {
       </Box>
 
       <Box sx={TeamImageStyleSX}>
-        <img src={images.whoWeAre} alt='WhoWeAre' style={{ width: '100%', height: "100%", objectFit: "cover" }}/>
+        <img
+          src={images.whoWeAre}
+          alt='WhoWeAre'
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        />
       </Box>
     </Box>
   );

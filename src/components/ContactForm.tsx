@@ -98,10 +98,10 @@ const BackgroundImageStyleSX: SxProps<Theme> = theme => ({
 });
 
 const TextFieldStyleSX: SxProps<Theme> = theme => ({
-  width: "400px",
+  width: '400px',
   backgroundColor: 'white',
   [theme.breakpoints.down('sm')]: {
-    width: "250px",
+    width: '250px',
   },
 });
 
@@ -121,6 +121,6 @@ const TitleStyleSX: SxProps<Theme> = theme => ({
 });
 
 const ButtonStyleSX: SxProps<Theme> = theme => ({
-  backgroundColor: "primary",
+  backgroundColor: 'primary',
   [theme.breakpoints.down('sm')]: {},
 });
