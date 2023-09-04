@@ -1,6 +1,7 @@
 import { images } from './images';
 
 export interface Dev {
+  id: number;
   img: string;
   firstname: string;
   lastname: string;
@@ -13,6 +14,7 @@ export interface Dev {
 
 export const devs: Dev[] = [
   {
+    id: 1,
     img: images.leon,
     firstname: 'Leon',
     lastname: 'Björklund',
@@ -24,6 +26,7 @@ export const devs: Dev[] = [
     email: '123123',
   },
   {
+    id: 2,
     img: images.thomas,
     firstname: 'Thomas',
     lastname: 'Ingvarsson',
@@ -35,6 +38,7 @@ export const devs: Dev[] = [
     email: '123123',
   },
   {
+    id: 3,
     img: images.parham,
     firstname: 'Parham',
     lastname: 'Berenjian',
@@ -45,6 +49,7 @@ export const devs: Dev[] = [
     email: '123123',
   },
   {
+    id: 4,
     img: images.edvin,
     firstname: 'Edvin',
     lastname: 'Djulic',
