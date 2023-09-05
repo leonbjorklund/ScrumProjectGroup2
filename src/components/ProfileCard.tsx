@@ -21,8 +21,7 @@ export default function ProfileCard() {
 
   return (
     <Box sx={DevCardStyleSX}>
-            <div id="profileCard" />
-
+      <div id='profileCard' />
       <Box sx={DevImgStyleSX}>
         <img src={dev.img} alt='profilepic' />
       </Box>
@@ -50,18 +49,20 @@ export default function ProfileCard() {
 
 const DevCardStyleSX: SxProps<Theme> = theme => ({
   display: 'flex',
-  height: '500px',
+  height: '400px',
   padding: '4rem 3rem',
   gap: '3rem',
   [theme.breakpoints.down('md')]: {
     gap: '1rem',
     justifyContent: 'center',
+    height: '300px',
   },
   [theme.breakpoints.down('sm')]: {
     flexDirection: 'column',
     alignItems: 'center',
     textAlign: 'center',
     justifyContent: 'center',
+    height: '400px',
   },
 });
 const DevImgStyleSX: SxProps<Theme> = theme => ({
@@ -119,7 +120,7 @@ const DevCompStyleSX: SxProps<Theme> = theme => ({
 });
 const DevDescStyleSX: SxProps<Theme> = theme => ({
   fontSize: '16px',
-  width: '70%',
+  width: '85%',
   paddingTop: '2rem',
   [theme.breakpoints.down('md')]: {
     width: '90%',

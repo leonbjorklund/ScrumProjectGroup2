@@ -16,7 +16,7 @@ export default function ContactForm() {
     },
   });
   return (
-    <Box sx={ContactFormStyleSX} id="contact">
+    <Box sx={ContactFormStyleSX} id='contact'>
       <Box sx={BackgroundImageStyleSX} />
       <Box component='form' noValidate onSubmit={formik.handleSubmit} sx={ContactFormStyleSX}>
         <Typography sx={TitleStyleSX} variant='h3'>

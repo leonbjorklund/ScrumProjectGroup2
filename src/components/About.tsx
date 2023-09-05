@@ -58,9 +58,10 @@ const TextBoxStyleSX: SxProps<Theme> = theme => ({
   },
 });
 
-const TitleStyleSX: SxProps<Theme> = theme => ({
+export const TitleStyleSX: SxProps<Theme> = theme => ({
   fontWeight: 'bold',
   paddingBottom: '1rem',
+  textAlign: 'center',
   [theme.breakpoints.down('md')]: {
     fontSize: '26px',
   },

@@ -11,8 +11,6 @@ import NotFound from './components/NotFound.tsx';
 import DevPage from './pages/DevPage.tsx';
 import HomePage from './pages/HomePage.tsx';
 
-import Login from './pages/Login.tsx';
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
