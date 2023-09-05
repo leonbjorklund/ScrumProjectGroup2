@@ -25,6 +25,8 @@ export const images = {
   kia: 'https://github-production-user-asset-6210df.s3.amazonaws.com/45374596/264604731-f26d4282-0463-42e2-bae3-a21e69947cb1.png',
   footerLogo:
     'https://github-production-user-asset-6210df.s3.amazonaws.com/45374596/264604854-facab66c-f738-47f4-9c31-c4e4d017a536.png',
+  favicon:
+    'https://github.com/leonbjorklund/ScrumProjectGroup2/assets/114247302/d4f1b127-80f9-4f16-8ce7-40ff6972bd7d',
 };
 
 // # Header Logo IMG: https://github-production-user-asset-6210df.s3.amazonaws.com/45374596/264602647-61a3e97d-d470-4d77-b60c-703e46d76d42.png
