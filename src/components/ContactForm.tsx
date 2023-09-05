@@ -15,6 +15,7 @@ export default function ContactForm() {
       formik.resetForm();
     },
   });
+
   return (
     <Box sx={ContactFormStyleSX} id='contact'>
       <Box sx={BackgroundImageStyleSX} />
@@ -22,43 +23,50 @@ export default function ContactForm() {
         <Typography sx={TitleStyleSX} variant='h3'>
           Contact us
         </Typography>
-        <TextField
-          sx={TextFieldStyleSX}
-          required
-          variant='filled'
-          label='Name'
-          name='name'
-          value={formik.values.name}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          error={formik.touched.name && Boolean(formik.errors.name)}
-          helperText={formik.touched.name && formik.errors.name}
-        />
-        <TextField
-          sx={TextFieldStyleSX}
-          required
-          variant='filled'
-          label='E-mail'
-          name='email'
-          value={formik.values.email}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          error={formik.touched.email && Boolean(formik.errors.email)}
-          helperText={formik.touched.email && formik.errors.email}
-        />
-        <TextField
-          sx={TextFieldStyleSX}
-          required
-          variant='filled'
-          label='Message'
-          multiline
-          rows={5}
-          name='message'
-          value={formik.values.message}
-          onChange={formik.handleChange}
-          error={formik.touched.message && Boolean(formik.errors.message)}
-          helperText={formik.touched.message && formik.errors.message}
-        />
+        <div style={{ height: '75px' }}> 
+          <TextField
+            sx={TextFieldStyleSX}
+            required
+            variant='filled'
+            label='Name'
+            name='name'
+            value={formik.values.name}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            error={formik.touched.name && Boolean(formik.errors.name)}
+            helperText={formik.touched.name && formik.errors.name}
+          />
+        </div>
+        <div style={{ height: '75px' }}> 
+          <TextField
+            sx={TextFieldStyleSX}
+            required
+            variant='filled'
+            label='E-mail'
+            name='email'
+            value={formik.values.email}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            error={formik.touched.email && Boolean(formik.errors.email)}
+            helperText={formik.touched.email && formik.errors.email}
+          />
+        </div>
+        <div style={{ height: '170px' }}> 
+          <TextField
+            sx={TextFieldStyleSX}
+            required
+            variant='filled'
+            label='Message'
+            multiline
+            rows={5}
+            name='message'
+            value={formik.values.message}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            error={formik.touched.message && Boolean(formik.errors.message)}
+            helperText={formik.touched.message && formik.errors.message}
+          />
+        </div>
         <Button variant='contained' type='submit' sx={ButtonStyleSX}>
           Send
         </Button>
@@ -99,10 +107,13 @@ const BackgroundImageStyleSX: SxProps<Theme> = theme => ({
 });
 
 const TextFieldStyleSX: SxProps<Theme> = theme => ({
+  '::after': {
+    height: '100px',
+  },
   width: '400px',
   backgroundColor: 'white',
   '& .MuiFormHelperText-root': {
-    color: 'black',
+    color: 'black !important',
     fontFamily: 'Poppins, sans-serif',
   },
   '& .MuiInputBase-root::before, & .MuiInputBase-root::after': {
