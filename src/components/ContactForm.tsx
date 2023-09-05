@@ -115,9 +115,6 @@ const BackgroundImageStyleSX: SxProps<Theme> = theme => ({
 });
 
 const TextFieldStyleSX: SxProps<Theme> = theme => ({
-  '::after': {
-    height: '100px',
-  },
   width: '400px',
   backgroundColor: 'white',
   '& .MuiFormHelperText-root': {
@@ -132,6 +129,9 @@ const TextFieldStyleSX: SxProps<Theme> = theme => ({
   },
   '& .MuiInput-underline::after': {
     borderBottom: 'none !important',
+  },
+  '& .MuiInputLabel-root.Mui-focused': {
+    color: 'black !important',
   },
   [theme.breakpoints.down('sm')]: {
     width: '250px',
@@ -156,10 +156,12 @@ const TitleStyleSX: SxProps<Theme> = theme => ({
 });
 
 const ButtonStyleSX: SxProps<Theme> = theme => ({
-  backgroundColor: 'white',
+  backgroundColor: 'secondary.main',
+  color: 'white',
   width: '150px',
   '&:hover': {
-    color: 'white',
+    color: 'secondary.main',
+    backgroundColor: 'white',
   },
   [theme.breakpoints.down('sm')]: {},
 });
