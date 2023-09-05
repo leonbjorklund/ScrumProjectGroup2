@@ -38,6 +38,9 @@ const heroContainerSX: SxProps<Theme> = theme => ({
     fontsize: '1rem',
     color: 'red',
   },
+  [theme.breakpoints.down('sm')]: {
+    minHeight: '450px',
+  },
 });
 
 const heroTextSX: SxProps<Theme> = {
@@ -52,6 +55,7 @@ const heroTextSX: SxProps<Theme> = {
   alignItems: 'center',
   justifyContent: 'center',
 };
+
 
 const header1SX: SxProps<Theme> = theme => ({
   fontSize: '3.5rem',
