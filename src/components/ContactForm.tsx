@@ -1,10 +1,24 @@
 import { Box, Button, SxProps, TextField, Theme, Typography } from '@mui/material';
 import { useFormik } from 'formik';
 import { useLocation, useParams } from 'react-router';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { devs } from '../assets/devs';
 import validationSchema from '../assets/validationSchema';
 
 export default function ContactForm() {
+  const notify = () => {
+    toast.success('Your message has been sent!', {
+      position: 'top-right',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'light',
+    });
+  };
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -15,6 +29,7 @@ export default function ContactForm() {
     onSubmit: () => {
       console.log('Det funkar!');
       formik.resetForm();
+      notify();
     },
   });
 
@@ -78,6 +93,7 @@ export default function ContactForm() {
         <Button variant='contained' type='submit' sx={ButtonStyleSX}>
           Send
         </Button>
+        <ToastContainer />
       </Box>
     </Box>
   );
