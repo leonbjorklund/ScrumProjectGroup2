@@ -1,5 +1,7 @@
 import { Box, Button, SxProps, TextField, Theme, Typography } from '@mui/material';
 import { useFormik } from 'formik';
+import { useLocation, useParams } from 'react-router';
+import { devs } from '../assets/devs';
 import validationSchema from '../assets/validationSchema';
 
 export default function ContactForm() {
@@ -16,14 +18,20 @@ export default function ContactForm() {
     },
   });
 
+  const location = useLocation();
+  const { firstname } = useParams<{ firstname: string }>();
+  const isHomePage = location.pathname === '/';
+  const dev = devs.find(dev => dev.firstname === firstname);
+  const title = isHomePage ? 'Contact us' : `Contact ${dev?.firstname}`;
+
   return (
     <Box sx={ContactFormStyleSX} id='contact'>
       <Box sx={BackgroundImageStyleSX} />
       <Box component='form' noValidate onSubmit={formik.handleSubmit} sx={ContactFormStyleSX}>
         <Typography sx={TitleStyleSX} variant='h3'>
-          Contact us
+          {title}
         </Typography>
-        <div style={{ height: '75px' }}> 
+        <div style={{ height: '75px' }}>
           <TextField
             sx={TextFieldStyleSX}
             required
@@ -37,7 +45,7 @@ export default function ContactForm() {
             helperText={formik.touched.name && formik.errors.name}
           />
         </div>
-        <div style={{ height: '75px' }}> 
+        <div style={{ height: '75px' }}>
           <TextField
             sx={TextFieldStyleSX}
             required
@@ -51,7 +59,7 @@ export default function ContactForm() {
             helperText={formik.touched.email && formik.errors.email}
           />
         </div>
-        <div style={{ height: '170px' }}> 
+        <div style={{ height: '170px' }}>
           <TextField
             sx={TextFieldStyleSX}
             required
