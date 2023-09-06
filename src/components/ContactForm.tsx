@@ -139,7 +139,6 @@ const TitleStyleSX: SxProps<Theme> = theme => ({
 const ButtonStyleSX: SxProps<Theme> = theme => ({
   backgroundColor: 'white',
   width: '150px',
-  boxShadow: '1px 1px 20px #FFF',
   '&:hover': {
     color: 'white',
   },
