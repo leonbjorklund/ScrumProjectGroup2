@@ -19,13 +19,14 @@ export default function Footer() {
         </Box>
         <Box sx={contactStyleSX}>
           <Box sx={contactTextStyleSX}>
-            <HomeIcon fontSize='small' /> Anders Personsgatan 18 <br></br> Göteborg
+            <HomeIcon fontSize='small' /> Anders Personsgatan 18, 416 64 Göteborg
           </Box>
           <Box sx={contactTextStyleSX}>
-            <EmailIcon fontSize='small' /> FifthElement@FifthElement.com
+            <EmailIcon fontSize='small' />{' '}
+            <a href='mailto:FifthElement@FifthElement.com'>FifthElement@FifthElement.com</a>
           </Box>
           <Box sx={contactTextStyleSX}>
-            <PhoneIphoneIcon fontSize='small' /> +46 702 337 341
+            <PhoneIphoneIcon fontSize='small' /> <a href='tel:+46 702 337 341'>+46 702 337 341</a>
           </Box>
         </Box>
       </Box>
@@ -65,7 +66,6 @@ const contentStyleSX: SxProps<Theme> = theme => ({
 const mapStyleSX: SxProps<Theme> = theme => ({
   borderRadius: '5px',
   width: '100%',
-
   height: '150px',
   overflow: 'hidden',
   [theme.breakpoints.down('md')]: {
@@ -88,6 +88,10 @@ const contactTextStyleSX: SxProps = {
   display: 'flex',
   alignItems: 'center',
   gap: '.5rem',
+  '& a': {
+    textDecoration: 'none',
+    color: '#FFF',
+  },
 };
 
 const footerLogoStyleSX: SxProps<Theme> = theme => ({
