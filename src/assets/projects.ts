@@ -149,7 +149,7 @@ export const edvinProjects: Project[] = [
   {
     name: 'Simiflix ',
     img: 'https://github.com/leonbjorklund/ScrumProjectGroup2/assets/117123951/9fdaf483-c34a-469d-9eda-af40a7c80841',
-    description: 'Simiflix is a web platform that uses an API to offer movie recommendations based on your search. Created with React, Typescript and uses an API from themoviedb.org',
+    description: 'Simiflix is a web platform that uses an API to offer movie recommendations based on your search. Created with React, Typescript and uses an API from themoviedb.org.',
     githubLink: 'https://github.com/Edvindjulic/Simiflix/',
     demoLink: 'https://simiflix.netlify.app/',
   },
