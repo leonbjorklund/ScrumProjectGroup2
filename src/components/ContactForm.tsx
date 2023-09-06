@@ -1,8 +1,24 @@
 import { Box, Button, SxProps, TextField, Theme, Typography } from '@mui/material';
 import { useFormik } from 'formik';
+import { useLocation, useParams } from 'react-router';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { devs } from '../assets/devs';
 import validationSchema from '../assets/validationSchema';
 
 export default function ContactForm() {
+  const notify = () => {
+    toast.success('Your message has been sent!', {
+      position: 'top-right',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'light',
+    });
+  };
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -13,55 +29,71 @@ export default function ContactForm() {
     onSubmit: () => {
       console.log('Det funkar!');
       formik.resetForm();
+      notify();
     },
   });
+
+  const location = useLocation();
+  const { firstname } = useParams<{ firstname: string }>();
+  const isHomePage = location.pathname === '/';
+  const dev = devs.find(dev => dev.firstname === firstname);
+  const title = isHomePage ? 'Contact us' : `Contact ${dev?.firstname}`;
+
   return (
     <Box sx={ContactFormStyleSX} id='contact'>
       <Box sx={BackgroundImageStyleSX} />
       <Box component='form' noValidate onSubmit={formik.handleSubmit} sx={ContactFormStyleSX}>
         <Typography sx={TitleStyleSX} variant='h3'>
-          Contact us
+          {title}
         </Typography>
-        <TextField
-          sx={TextFieldStyleSX}
-          required
-          variant='filled'
-          label='Name'
-          name='name'
-          value={formik.values.name}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          error={formik.touched.name && Boolean(formik.errors.name)}
-          helperText={formik.touched.name && formik.errors.name}
-        />
-        <TextField
-          sx={TextFieldStyleSX}
-          required
-          variant='filled'
-          label='E-mail'
-          name='email'
-          value={formik.values.email}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          error={formik.touched.email && Boolean(formik.errors.email)}
-          helperText={formik.touched.email && formik.errors.email}
-        />
-        <TextField
-          sx={TextFieldStyleSX}
-          required
-          variant='filled'
-          label='Message'
-          multiline
-          rows={5}
-          name='message'
-          value={formik.values.message}
-          onChange={formik.handleChange}
-          error={formik.touched.message && Boolean(formik.errors.message)}
-          helperText={formik.touched.message && formik.errors.message}
-        />
+        <div style={{ height: '75px' }}>
+          <TextField
+            sx={TextFieldStyleSX}
+            required
+            variant='filled'
+            label='Name'
+            name='name'
+            value={formik.values.name}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            error={formik.touched.name && Boolean(formik.errors.name)}
+            helperText={formik.touched.name && formik.errors.name}
+          />
+        </div>
+        <div style={{ height: '75px' }}>
+          <TextField
+            sx={TextFieldStyleSX}
+            required
+            variant='filled'
+            label='E-mail'
+            name='email'
+            value={formik.values.email}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            error={formik.touched.email && Boolean(formik.errors.email)}
+            helperText={formik.touched.email && formik.errors.email}
+          />
+        </div>
+        <div style={{ height: '170px' }}>
+          <TextField
+            sx={TextFieldStyleSX}
+            required
+            variant='filled'
+            label='Message'
+            multiline
+            rows={5}
+            name='message'
+            value={formik.values.message}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            error={formik.touched.message && Boolean(formik.errors.message)}
+            helperText={formik.touched.message && formik.errors.message}
+          />
+        </div>
         <Button variant='contained' type='submit' sx={ButtonStyleSX}>
           Send
         </Button>
+        <ToastContainer />
       </Box>
     </Box>
   );
@@ -102,7 +134,7 @@ const TextFieldStyleSX: SxProps<Theme> = theme => ({
   width: '400px',
   backgroundColor: 'white',
   '& .MuiFormHelperText-root': {
-    color: 'black',
+    color: 'black !important',
     fontFamily: 'Poppins, sans-serif',
   },
   '& .MuiInputBase-root::before, & .MuiInputBase-root::after': {
@@ -113,6 +145,9 @@ const TextFieldStyleSX: SxProps<Theme> = theme => ({
   },
   '& .MuiInput-underline::after': {
     borderBottom: 'none !important',
+  },
+  '& .MuiInputLabel-root.Mui-focused': {
+    color: 'black !important',
   },
   [theme.breakpoints.down('sm')]: {
     width: '250px',
@@ -137,10 +172,12 @@ const TitleStyleSX: SxProps<Theme> = theme => ({
 });
 
 const ButtonStyleSX: SxProps<Theme> = theme => ({
-  backgroundColor: 'white',
+  backgroundColor: 'secondary.main',
+  color: 'white',
   width: '150px',
   '&:hover': {
-    color: 'white',
+    color: 'secondary.main',
+    backgroundColor: 'white',
   },
   [theme.breakpoints.down('sm')]: {},
 });
