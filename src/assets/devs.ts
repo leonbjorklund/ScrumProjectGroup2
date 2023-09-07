@@ -40,7 +40,7 @@ export const devs: Dev[] = [
     about:
       '“My main hobbies are skateboarding and videogames. I allways like a challenge and to push myself to get better and more confident.”',
     profileDesc:
-      'Thomas: With a combination of passion and education, my expertice in Back end development has a sturdy foundation and solid structure. I love learning new ways to improve both myself and my code.',
+      'My expertise in back-end development is built on a solid foundation of education and fueled by my passion for the field. I am constantly seeking new ways to improve both my skills and my code, and I love the challenge of learning and growing in my craft. With this combination of drive and knowledge, I am confident in my ability to excel as a back-end developer. Is there anything else you would like me to help you with? 😊',
     email: '123123',
     projects: thomasProjects,
   },

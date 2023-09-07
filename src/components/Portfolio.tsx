@@ -9,6 +9,7 @@ import {
   Grid,
   SxProps,
   Theme,
+  Tooltip,
   Typography,
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
@@ -84,60 +85,57 @@ export default function Portfolio() {
                   color: textColor,
                 }}
               >
-                <CardMedia
-                  component='img'
-                  height='180'
-                  image={project.img}
-                  alt={project.name}
-                  sx={{ border: '1px solid red' }}
-                />
+                <CardMedia component='img' height='225' image={project.img} alt={project.name} />
                 <CardContent sx={ProjectDetailsStyleSX}>
                   <Typography variant='h5' component='div'>
                     {project.name}
                   </Typography>
                   <Typography variant='body2'>{project.description}</Typography>
                   <Box sx={ProjectLinksStyleSX}>
-                    <Button
-                      href={project.githubLink}
-                      variant='contained'
-                      sx={{
-                        padding: '0px!important',
-                        backgroundColor: backgroundColor,
-                        color: textColor,
-                        minWidth: '0px!important',
-                        boxShadow: 'none!important',
-                        '& a, span': {
-                          padding: '.3rem .5rem!important',
-                          border: 'none!important',
-                          margin: '0!important',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                        },
-                      }}
-                      startIcon={<GitHubIcon style={{ fontSize: '32px' }} />}
-                    ></Button>
-
-                    <Button
-                      href={project.demoLink}
-                      variant='contained'
-                      sx={{
-                        padding: '0px!important',
-                        backgroundColor: backgroundColor,
-                        color: textColor,
-                        minWidth: '0px!important',
-                        boxShadow: 'none!important',
-                        '& a, span': {
-                          padding: '.3rem .5rem!important',
-                          border: 'none!important',
-                          margin: '0!important',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                        },
-                      }}
-                      startIcon={<PlayCircleFilledIcon style={{ fontSize: '32px' }} />}
-                    ></Button>
+                    <Tooltip title='Github link' arrow>
+                      <Button
+                        href={project.githubLink}
+                        variant='contained'
+                        sx={{
+                          padding: '0px!important',
+                          backgroundColor: backgroundColor,
+                          color: textColor,
+                          minWidth: '0px!important',
+                          boxShadow: 'none!important',
+                          '& a, span': {
+                            padding: '.3rem .5rem!important',
+                            border: 'none!important',
+                            margin: '0!important',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                          },
+                        }}
+                        startIcon={<GitHubIcon style={{ fontSize: '32px' }} />}
+                      ></Button>
+                    </Tooltip>
+                    <Tooltip title='Demo link' arrow>
+                      <Button
+                        href={project.demoLink}
+                        variant='contained'
+                        sx={{
+                          padding: '0px!important',
+                          backgroundColor: backgroundColor,
+                          color: textColor,
+                          minWidth: '0px!important',
+                          boxShadow: 'none!important',
+                          '& a, span': {
+                            padding: '.3rem .5rem!important',
+                            border: 'none!important',
+                            margin: '0!important',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                          },
+                        }}
+                        startIcon={<PlayCircleFilledIcon style={{ fontSize: '32px' }} />}
+                      ></Button>
+                    </Tooltip>
                   </Box>
                 </CardContent>
               </Card>
@@ -161,12 +159,12 @@ const GridStyleSX: SxProps<Theme> = theme => ({
 
 const GridItemStyleSX: SxProps<Theme> = theme => ({
   padding: '0px!important',
-  height: '380px!important',
+  minHeight: '420px',
   [theme.breakpoints.down('sm')]: {},
 });
 
 const ProjectCardStyleSX: SxProps<Theme> = theme => ({
-  height: '100%',
+  minHeight: '420px',
   display: 'flex',
   flexDirection: 'column',
   [theme.breakpoints.down('sm')]: {},

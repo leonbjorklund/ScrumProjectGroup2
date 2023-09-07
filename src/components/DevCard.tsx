@@ -36,7 +36,7 @@ export default function DevCard({ dev }: DevCardProps) {
 
       <NavLink to={`/developers/${dev.firstname}`}>
         <Button onClick={() => scrollDown('profileCard')} sx={ButtonStyleSX}>
-          Developers
+          Read More
         </Button>
       </NavLink>
     </Box>

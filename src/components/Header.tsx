@@ -47,9 +47,6 @@ export default function DrawerAppBar() {
       <Button onClick={() => scrollDown('contact')} sx={linkStyleSX}>
         Contact
       </Button>
-      <NavLink to='/'>
-        <Button sx={linkStyleSX}>Login</Button>
-      </NavLink>
     </Box>
   );
 
@@ -76,9 +73,6 @@ export default function DrawerAppBar() {
             <Button onClick={() => scrollDown('contact')} sx={linkStyleSX}>
               Contact
             </Button>
-            <NavLink to='/'>
-              <Button sx={linkStyleSX}>Login</Button>
-            </NavLink>
           </Box>
           <IconButton
             color='inherit'
