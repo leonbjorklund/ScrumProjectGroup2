@@ -21,11 +21,11 @@ export const devs: Dev[] = [
     firstname: 'Leon',
     lastname: 'Björklund',
     role: 'UX-designer',
-    comp: ['React', ''],
+    comp: ['React', 'TS', 'EXPRESS', 'HTML', 'CSS', 'Node.js'],
     about:
       '“I like creating and designing intuitive web-apps. I always strive to create the best experience for the end user as possible.”',
     profileDesc:
-      'Leon: With a combination of passion and education, my expertise in Back end development has a sturdy foundation and solid structure. I love learning new ways to improve both myself and my code.',
+      'With a combination of passion and education, my expertise in Front end development has a sturdy foundation and solid structure. My passion is designing intuitive apps to create the most enjoyable experience for the end user.',
     email: '123123',
     projects: leonProjects,
   },
@@ -54,8 +54,8 @@ export const devs: Dev[] = [
     comp: ['React', 'JS', 'Node.js', 'MongoDB', 'MYSQL'],
     about: '“I enjoy nature walks and spending time with my family & firends.”',
     profileDesc:
-      'Parham: With a combination of passion and education, my expertice in Back end development has a sturdy foundation and solid structure. I love learning new ways to improve both myself and my code.',
-    email: '123123',
+      "With a combination of passion and education, my expertice in Back end development has a sturdy foundation and solid structure. I love learning new ways to improve both myself and my code. I've got my degree from Medieinstitutet in Gothenburg, Sweden and spend my teenage with code before that as well. During my free time I love to hike and go on naturewalks with my dog or spend time with friends and family. I'm eager to help, so don't hesitate to shoot me a mail and let's code your vision! :)",
+    email: 'parham.berenjian@gmail.com',
     projects: parhamProjects,
   },
   {
@@ -64,12 +64,12 @@ export const devs: Dev[] = [
     firstname: 'Edvin',
     lastname: 'Djulic',
     role: 'Front end developer',
-    comp: ['React', ''],
+    comp: ['React', 'TS', 'EXPRESS', 'HTML', 'CSS', 'Node.js'],
     about:
       '“In my spare time I enjoy working out, watch sports and spend time with family and friends.”',
     profileDesc:
-      'Edvin: With a combination of passion and education, my expertice in Back end development has a sturdy foundation and solid structure. I love learning new ways to improve both myself and my code.',
-    email: '123123',
+      'Dynamic Front-end Developer specializing in React and Typescript. With a robust skill set that includes Express, HTML, CSS and Node.js, I am passionate about crafting intuitive user interfaces and delivering seamless user experiences.',
+    email: 'djulicedvin@gmail.com',
     projects: edvinProjects,
   },
 ];

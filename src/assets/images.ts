@@ -2,8 +2,10 @@ export const images = {
   headerLogo:
     'https://github-production-user-asset-6210df.s3.amazonaws.com/45374596/264663257-d2457ad0-343b-46c3-9672-123f566fe778.png',
   hero: 'https://github-production-user-asset-6210df.s3.amazonaws.com/45374596/264602286-1eed5533-3b5a-48d0-998f-372a34762772.png',
+  // whoWeAre:
+  //   'https://github-production-user-asset-6210df.s3.amazonaws.com/45374596/264602797-07aeb851-4c9a-49d0-870d-030f3c1c08af.png',
   whoWeAre:
-    'https://github-production-user-asset-6210df.s3.amazonaws.com/45374596/264602797-07aeb851-4c9a-49d0-870d-030f3c1c08af.png',
+    'https://media.discordapp.net/attachments/1143544655573688393/1149269118579650570/34427990_8161040.jpg?width=903&height=903',
   companyServices:
     'https://github-production-user-asset-6210df.s3.amazonaws.com/117123951/264786015-86aa1894-40c3-48ad-b61e-695bfb981105.jpg',
   leon: 'https://github-production-user-asset-6210df.s3.amazonaws.com/45374596/264603124-02b6e38a-96c8-4c3d-a838-ce011da1fb7a.png',

@@ -18,7 +18,7 @@ export default function About() {
         <img
           src={images.whoWeAre}
           alt='WhoWeAre'
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          style={{ width: '100%', height: '450px', objectFit: 'cover' }}
         />
       </Box>
     </Box>
@@ -62,6 +62,9 @@ export const TitleStyleSX: SxProps<Theme> = theme => ({
   fontWeight: 'bold',
   paddingBottom: '1rem',
   textAlign: 'center',
+  [theme.breakpoints.down('lg')]: {
+    fontSize: '28px',
+  },
   [theme.breakpoints.down('md')]: {
     fontSize: '26px',
   },
@@ -73,6 +76,9 @@ export const TitleStyleSX: SxProps<Theme> = theme => ({
 const TextStyleSX: SxProps<Theme> = theme => ({
   fontFamily: 'Poppins, sans-serif',
   fontSize: '26px',
+  [theme.breakpoints.down('lg')]: {
+    fontSize: '24px',
+  },
   [theme.breakpoints.down('md')]: {
     fontSize: '22px',
   },
