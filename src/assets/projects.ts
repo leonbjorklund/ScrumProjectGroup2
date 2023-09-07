@@ -73,7 +73,7 @@ export const thomasProjects: Project[] = [
     img: thomasProjectImages.church,
     description: 'Project was to take an old webpage and modernise it. Using HTML & CSS only',
     githubLink: 'href="https://gunnaring.github.io/Apple-frontpage-copy/',
-    demoLink: 'href="https://gunnaring.github.io/Inl-mning-2-Old-website/',
+    demoLink: 'https://gunnaring.github.io/Inl-mning-2-Old-website/',
   },
   {
     name: 'E-commerce website',
@@ -95,7 +95,7 @@ export const thomasProjects: Project[] = [
     img: thomasProjectImages.quiz,
     description: 'A quiz game built with React TS and JSS using an API for the whole game.',
     githubLink: 'https://github.com/GunnarIng/Quiz-TLS',
-    demoLink: 'href="https://quiziequiz.netlify.app/',
+    demoLink: 'https://quiziequiz.netlify.app/',
   },
 ];
 
@@ -149,42 +149,48 @@ export const edvinProjects: Project[] = [
   {
     name: 'Simiflix ',
     img: 'https://github.com/leonbjorklund/ScrumProjectGroup2/assets/117123951/9fdaf483-c34a-469d-9eda-af40a7c80841',
-    description: 'Simiflix is a web platform that uses an API to offer movie recommendations based on your search. Created with React, Typescript and uses an API from themoviedb.org.',
+    description:
+      'Simiflix is a web platform that uses an API to offer movie recommendations based on your search. Created with React, Typescript and uses an API from themoviedb.org.',
     githubLink: 'https://github.com/Edvindjulic/Simiflix/',
     demoLink: 'https://simiflix.netlify.app/',
   },
   {
     name: 'Frostbite Frenzy',
     img: 'https://github.com/leonbjorklund/ScrumProjectGroup2/assets/117123951/688fa591-41c5-4653-94e2-df426a80e4ad',
-    description: 'In Frostbite Frenzy players navigate a dynamically generated maze using Typescript and p5.js. to avoid monsters and collect keys. The game is developed for two players. ',
+    description:
+      'In Frostbite Frenzy players navigate a dynamically generated maze using Typescript and p5.js. to avoid monsters and collect keys. The game is developed for two players. ',
     githubLink: 'https://github.com/Edvindjulic/Frostbite-Frenzy/',
     demoLink: 'https://frostbite-frenzy.netlify.app/',
   },
   {
     name: 'Javascript calendar',
     img: 'https://github.com/leonbjorklund/ScrumProjectGroup2/assets/117123951/ffe42b45-c883-45c0-b60e-21da716c2cf3',
-    description: 'The calendar is made with vanilla Javascript and allows users to create to-dos that are placed on specific dates.',
+    description:
+      'The calendar is made with vanilla Javascript and allows users to create to-dos that are placed on specific dates.',
     githubLink: 'https://github.com/Edvindjulic/Calendar-Javascript',
     demoLink: 'https://vanillajavascript-calendar.netlify.app/',
   },
   {
     name: 'RetroCap',
     img: 'https://github.com/leonbjorklund/ScrumProjectGroup2/assets/117123951/f3845325-4d32-44c6-abdd-5b36e4508010',
-    description: 'RetroCap is a fictive brand that sells caps with famous movie quotes on them. The main focus of this project was to create and implement a graphic profile where everything was made from scratch.',
+    description:
+      'RetroCap is a fictive brand that sells caps with famous movie quotes on them. The main focus of this project was to create and implement a graphic profile where everything was made from scratch.',
     githubLink: 'https://github.com/Edvindjulic/Retro-Cap',
     demoLink: 'https://retrocaps.netlify.app/',
   },
   {
     name: 'Ski-doo',
     img: 'https://github.com/leonbjorklund/ScrumProjectGroup2/assets/117123951/b6a17eed-8d4d-4ee2-b252-967298d80ed4',
-    description: 'Ski-doo is a webshop that sells snowmobiles. The project was created using React, Typescript and Material UI. Everything saved gets stored in local storage as no database was used for this project. ',
+    description:
+      'Ski-doo is a webshop that sells snowmobiles. The project was created using React, Typescript and Material UI. Everything saved gets stored in local storage as no database was used for this project. ',
     githubLink: 'https://github.com/Edvindjulic/Ski-doo-React-Webshop',
     demoLink: 'https://ski-doo-webshop.netlify.app/',
   },
   {
     name: 'VUE 3 API',
     img: 'https://github.com/leonbjorklund/ScrumProjectGroup2/assets/117123951/a4aae71f-c025-427a-9ecf-ed612731f05c',
-    description: 'This small project was created to learn the basics of Vue 3 and how to fetch data from an API aswell as using pagination to display the data.',
+    description:
+      'This small project was created to learn the basics of Vue 3 and how to fetch data from an API aswell as using pagination to display the data.',
     githubLink: 'https://github.com/Edvindjulic/VUE-3-koduppgift',
     demoLink: 'https://edvin-djulic-koduppgift.netlify.app/',
   },
