@@ -6,7 +6,7 @@ export default function Developers() {
   return (
     <Box sx={DevBoxStyleSX}>
       <Typography sx={TitleStyleSX} variant='h2' color={'secondary'} id='developers'>
-        Our team of developers
+        Our Team
       </Typography>
       <Box sx={DevsStyleSX}>
         {devs.map(dev => (

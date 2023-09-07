@@ -59,7 +59,7 @@ export default function Portfolio() {
   }
 
   return (
-    <Box sx={{ paddingBottom: '2rem' }}>
+    <Box>
       <Typography
         sx={TitleStyleSX}
         style={{ fontSize: '48px', paddingTop: '2rem' }}
@@ -149,6 +149,8 @@ export default function Portfolio() {
 
 const GridStyleSX: SxProps<Theme> = theme => ({
   width: '100%',
+  minHeight: '100%',
+  borderRadius: '0px',
   margin: '0',
   padding: '0rem',
   marginTop: '0rem',
@@ -160,13 +162,15 @@ const GridStyleSX: SxProps<Theme> = theme => ({
 const GridItemStyleSX: SxProps<Theme> = theme => ({
   padding: '0px!important',
   minHeight: '420px',
+
   [theme.breakpoints.down('sm')]: {},
 });
 
 const ProjectCardStyleSX: SxProps<Theme> = theme => ({
-  minHeight: '420px',
   display: 'flex',
   flexDirection: 'column',
+  borderRadius: '0px',
+  minHeight: '100%',
   [theme.breakpoints.down('sm')]: {},
 });
 
@@ -176,6 +180,7 @@ const ProjectDetailsStyleSX: SxProps<Theme> = theme => ({
   flexDirection: 'column',
   justifyContent: 'space-between',
   height: '100%',
+  flex: '1',
   [theme.breakpoints.down('sm')]: {},
 });
 

@@ -49,20 +49,20 @@ export default function ProfileCard() {
 
 const DevCardStyleSX: SxProps<Theme> = theme => ({
   display: 'flex',
-  height: '400px',
-  padding: '4rem 3rem',
+  height: '100%',
+  margin: '4rem 3rem 0rem 3rem',
   gap: '3rem',
   [theme.breakpoints.down('md')]: {
     gap: '1rem',
     justifyContent: 'center',
-    height: '300px',
+    margin: '4rem 3rem 0rem 3rem',
   },
   [theme.breakpoints.down('sm')]: {
     flexDirection: 'column',
     alignItems: 'center',
     textAlign: 'center',
     justifyContent: 'center',
-    height: '400px',
+    margin: '2rem 3rem 2rem 3rem',
   },
 });
 const DevImgStyleSX: SxProps<Theme> = theme => ({

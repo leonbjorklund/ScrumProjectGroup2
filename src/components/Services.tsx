@@ -76,6 +76,9 @@ const TitleStyleSX: SxProps<Theme> = theme => ({
   fontWeight: 'bold',
   color: 'white',
   padding: '1rem 0 1rem 4rem',
+  [theme.breakpoints.down('lg')]: {
+    fontSize: '28px',
+  },
   [theme.breakpoints.down('md')]: {
     fontSize: '24px',
     padding: '1rem 0 1rem 2rem',
@@ -89,13 +92,16 @@ const ListItemStyleSX: SxProps<Theme> = theme => ({
   paddingTop: '0',
   paddingLeft: '6rem',
   [theme.breakpoints.down('md')]: {
-    paddingLeft: '2rem',
+    paddingLeft: '3rem',
   },
 });
 
 const TextStyleSX: SxProps<Theme> = theme => ({
   fontFamily: 'Poppins, sans-serif',
   fontSize: '26px',
+  [theme.breakpoints.down('lg')]: {
+    fontSize: '24px',
+  },
   [theme.breakpoints.down('md')]: {
     fontSize: '22px',
     paddingRight: '1rem',
