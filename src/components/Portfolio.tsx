@@ -83,7 +83,7 @@ export default function Portfolio() {
                 key={index}
                 initial={{ opacity: 0, translateX: -500, translateY: -500 }}
                 animate={{ opacity: 1, translateX: 0, translateY: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.3 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Card
                   sx={ProjectCardStyleSX}
