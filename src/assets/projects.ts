@@ -97,6 +97,13 @@ export const thomasProjects: Project[] = [
     githubLink: 'https://github.com/GunnarIng/Quiz-TLS',
     demoLink: 'https://quiziequiz.netlify.app/',
   },
+  {
+    name: 'The Landlord ',
+    img: thomasProjectImages.weather,
+    description: 'Textbased interactive game with use of JavaScript. There are diffrent outcomings depending on what choices you do in the game.',
+    githubLink: 'https://github.com/GunnarIng/The-landlord',
+    demoLink: 'https://gunnaring.github.io/The-landlord/',
+  },
 ];
 
 export const parhamProjects: Project[] = [

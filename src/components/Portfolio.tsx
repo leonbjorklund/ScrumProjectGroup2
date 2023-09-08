@@ -14,6 +14,7 @@ import {
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 import {
   Project,
@@ -78,67 +79,74 @@ export default function Portfolio() {
 
           return (
             <Grid item xs={12 / cols} key={index} sx={GridItemStyleSX}>
-              <Card
-                sx={ProjectCardStyleSX}
-                style={{
-                  backgroundColor: backgroundColor,
-                  color: textColor,
-                }}
+              <motion.div style={{ width: '100%', height: '100%' }}
+                key={index}
+                initial={{ opacity: 0, translateX: -500, translateY: -500 }}
+                animate={{ opacity: 1, translateX: 0, translateY: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <CardMedia component='img' height='225' image={project.img} alt={project.name} />
-                <CardContent sx={ProjectDetailsStyleSX}>
-                  <Typography variant='h5' component='div'>
-                    {project.name}
-                  </Typography>
-                  <Typography variant='body2'>{project.description}</Typography>
-                  <Box sx={ProjectLinksStyleSX}>
-                    <Tooltip title='Github link' arrow>
-                      <Button
-                        href={project.githubLink}
-                        variant='contained'
-                        sx={{
-                          padding: '0px!important',
-                          backgroundColor: backgroundColor,
-                          color: textColor,
-                          minWidth: '0px!important',
-                          boxShadow: 'none!important',
-                          '& a, span': {
-                            padding: '.3rem .5rem!important',
-                            border: 'none!important',
-                            margin: '0!important',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                          },
-                        }}
-                        startIcon={<GitHubIcon style={{ fontSize: '32px' }} />}
-                      ></Button>
-                    </Tooltip>
-                    <Tooltip title='Demo link' arrow>
-                      <Button
-                        href={project.demoLink}
-                        variant='contained'
-                        sx={{
-                          padding: '0px!important',
-                          backgroundColor: backgroundColor,
-                          color: textColor,
-                          minWidth: '0px!important',
-                          boxShadow: 'none!important',
-                          '& a, span': {
-                            padding: '.3rem .5rem!important',
-                            border: 'none!important',
-                            margin: '0!important',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                          },
-                        }}
-                        startIcon={<PlayCircleFilledIcon style={{ fontSize: '32px' }} />}
-                      ></Button>
-                    </Tooltip>
-                  </Box>
-                </CardContent>
-              </Card>
+                <Card
+                  sx={ProjectCardStyleSX}
+                  style={{
+                    backgroundColor: backgroundColor,
+                    color: textColor,
+                  }}
+                >
+                  <CardMedia component='img' height='225' image={project.img} alt={project.name} />
+                  <CardContent sx={ProjectDetailsStyleSX}>
+                    <Typography variant='h5' component='div'>
+                      {project.name}
+                    </Typography>
+                    <Typography variant='body2'>{project.description}</Typography>
+                    <Box sx={ProjectLinksStyleSX}>
+                      <Tooltip title='Github link' arrow>
+                        <Button
+                          href={project.githubLink}
+                          variant='contained'
+                          sx={{
+                            padding: '0px!important',
+                            backgroundColor: backgroundColor,
+                            color: textColor,
+                            minWidth: '0px!important',
+                            boxShadow: 'none!important',
+                            '& a, span': {
+                              padding: '.3rem .5rem!important',
+                              border: 'none!important',
+                              margin: '0!important',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                            },
+                          }}
+                          startIcon={<GitHubIcon style={{ fontSize: '32px' }} />}
+                        ></Button>
+                      </Tooltip>
+                      <Tooltip title='Demo link' arrow>
+                        <Button
+                          href={project.demoLink}
+                          variant='contained'
+                          sx={{
+                            padding: '0px!important',
+                            backgroundColor: backgroundColor,
+                            color: textColor,
+                            minWidth: '0px!important',
+                            boxShadow: 'none!important',
+                            '& a, span': {
+                              padding: '.3rem .5rem!important',
+                              border: 'none!important',
+                              margin: '0!important',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                            },
+                          }}
+                          startIcon={<PlayCircleFilledIcon style={{ fontSize: '32px' }} />}
+                        ></Button>
+                      </Tooltip>
+                    </Box>
+                  </CardContent>
+                </Card>
+              </motion.div>
             </Grid>
           );
         })}
