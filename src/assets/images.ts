@@ -40,8 +40,8 @@ export const thomasProjectImages = {
   church:
     'https://github-production-user-asset-6210df.s3.amazonaws.com/105804552/265695094-b6750a6b-d071-4c55-b37d-04d53e5bb62d.png',
   quiz: 'https://github-production-user-asset-6210df.s3.amazonaws.com/105804552/265695098-b78b544d-8ed7-413a-b134-58b12bf0e110.png',
-  landlord:
-    'https://github-production-user-asset-6210df.s3.amazonaws.com/105804552/265695100-0fed95a5-ce73-4a56-b094-79ef9c0bdafb.png',
+ 
+  weather: 'https://github-production-user-asset-6210df.s3.amazonaws.com/105804552/266546764-cda9f7b0-a29f-46ac-9411-50fdd03e81fc.png',
 };
 
 export const leonProjectsImages = {};
